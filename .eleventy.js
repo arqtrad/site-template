@@ -11,7 +11,9 @@ module.exports = function(eleventyConfig) {
   // Return your Object options:
   return {
     dir: {
+      markdownTemplateEngine: 'njk',
       htmlTemplateEngine: "njk",
+      dataTemplateEngine: 'njk',
       input: "docs",
       layouts: "_layouts",
       output: "_site",
