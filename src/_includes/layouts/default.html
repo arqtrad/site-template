@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ lang }}" xml:lang="{{ lang }}"{% if page.dir %} dir="{{ dir }}"{% endif %}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+{% for page.author-meta %}
+<meta name="author" content="{{ author-meta }}" />
+{% endfor %}
+{% if page.date-meta %}
+<meta name="dcterms.date" content="{{ date-meta }}" />
+{% endif %}
+{% if page.keywords %}
+<meta name="keywords" content="{% for keywords in page.keywords %}{{ keywords }}{{ sep }}, {% endfor %}" />
+{% endif %}
+{% if page.description-meta %}
+<meta name="description" content="{{ description-meta }}" />
+{% endif %}
+<title>{% if page.title-prefix %}{{ title-prefix }} – {% endif %}{{ pagetitle }}</title>
+  <style>
+  {{ styles.html() }}
+  </style>
+{% for page.css %}
+  <link rel="stylesheet" href="{{ css }}" />
+{% endfor %}
+{% for page.header-includes %}
+  {{ header-includes }}
+{% endfor %}
+{% if page.math %}
+{% if page.mathjax %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+{% endif %}
+  {{ math }}
+{% endif %}
+</head>
+<body>
+{% for page.include-before %}
+  {{ include-before }}
+{% endfor %}
+{% if page.title %}
+<header class="site--header">
+	<!-- site logo here -->
+	<nav id="site-nav">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/exp">Expediente</a></li>
+		</ul>
+	</nav>
+</header>
+<header id="title-block-header">
+<h1 class="title">{{ page.title }}</h1>
+{% if page.subtitle %}
+<p class="subtitle">{{ page.subtitle }}</p>
+{% endif %}
+{% for page.author %}
+<p class="author">{{ page.author }}</p>
+{% endfor %}
+{% if page.date %}
+<p class="date">{{ page.date }}</p>
+{% endif %}
+{% if page.abstract %}
+<div class="abstract">
+  <div class="abstract-title">{{ abstract-title }}</div>
+  {{ abstract }}
+</div>
+{% endif %}
+</header>
+{% endif %}
+{% if page.toc %}
+<nav id="{{ idprefix }}TOC" role="doc-toc">
+{% if page.toc-title %}
+<h2 id="{{ page.idprefix }}toc-title">{{ page.toc-title }}</h2>
+{% endif %}
+{{ page.table-of-contents }}
+</nav>
+{% endif %}
+{{ content }}
+{% for page.include-after %}
+{{ page.include-after }}
+{% endfor %}
+<footer>
+	<p>(c) 2024</p>
+</footer>
+</body>
+</html>
