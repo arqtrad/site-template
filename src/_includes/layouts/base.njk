@@ -8,9 +8,14 @@
   {{ includeBefore }}
 {% endfor %}
 
-{% block content %}
-  {{ content }}
+{% block header %}
 {% endblock %}
+
+<main>
+{% block content %}
+  <p>Placeholder content.</p>
+{% endblock %}
+</main>
 
 {% for includeAfter in includeAfter %}
   {{ includeAfter }}

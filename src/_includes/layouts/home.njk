@@ -1,9 +1,9 @@
 {% extends "layouts/base.njk" %}
 
-{% block content %}
-<div class="px-4 py-5 my-5 text-center">
+{% block header %}
+<div class="px-4 py-5 my-5 container text-center bg-body-tertiary">
   <h1 class="display-5">{{ site.name }}</h1>
-  <div class="col-lg-6 max-auto">
+  <div id="home-lead" class="col-lg-6 max-auto">
     <p class="lead mb-4">
       {% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}
     </p>
@@ -12,8 +12,10 @@
     </form>
   </div>
 </div>
+{% endblock %}
 
+{% block content %}
 <div id="search-results"></div>
 
-{{ content }}
+{{ content | safe }}
 {% endblock %}
