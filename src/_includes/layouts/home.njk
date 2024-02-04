@@ -1,0 +1,19 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5">{{ site.name }}</h1>
+  <div class="col-lg-6 max-auto">
+    <p class="lead mb-4">
+      {% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}
+    </p>
+    <form class="d-sm-flex justify-content-sm-center" role="search">
+      <input class="form-control" type="search" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisa">
+    </form>
+  </div>
+</div>
+
+<div id="search-results"></div>
+
+{{ content }}
+{% endblock %}

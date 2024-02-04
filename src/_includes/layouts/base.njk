@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{% if lang %}{{ lang }}{% else %}{{ site.lang }}{% endif %}" xml:lang="{% if lang %}{{ lang }}{% else %}{{ site.lang }}{% endif %}"{% if page.dir %} dir="{{ dir }}"{% endif %}>
+<head>
+  {% include "partials/head.njk" %}
+</head>
+<body>
+{% for includeBefore in includeBefore %}
+  {{ includeBefore }}
+{% endfor %}
+
+{% block content %}
+  {{ content }}
+{% endblock %}
+
+{% for includeAfter in includeAfter %}
+  {{ includeAfter }}
+{% endfor %}
+<footer>
+  {% include "partials/footer.njk" %}
+</footer>
+</body>
+</html>
