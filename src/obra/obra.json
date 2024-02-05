@@ -1,0 +1,5 @@
+{
+  "title": "Casa",
+	"layout": "layouts/obra.njk",
+  "listed": false
+}

@@ -1,0 +1,32 @@
+{% extends "layouts/base.njk" %}
+
+{% block header %}
+<h1>{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="col">
+  <div class="card">
+    <div class="card-body">
+      <div id="map" class="card-img-top" style="width: 100%; height: 400px;"></div>
+    </div><!--/.card-body-->
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Endereço</li>
+      <li class="list-group-item">Outras referências</li>
+    </ul>
+  </div><!--/.card-->
+</div><!--/.col-->
+
+{{ content }}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const latitude = {{ latitude }};
+    const longitude = {{ longitude }};
+    const map = initializeMap(latitude, longitude);
+  });
+</script>
+{% endblock %}
+
+{% block after %}
+{% endblock %}
