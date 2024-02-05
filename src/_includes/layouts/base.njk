@@ -8,10 +8,11 @@
   {{ includeBefore }}
 {% endfor %}
 
-<header>
+{% block nav %}
+  {% include "partials/nav.njk" %}
+{% endblock %}
 {% block header %}
 {% endblock %}
-</header>
 
 <main>
 {% block content %}

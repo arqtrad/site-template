@@ -17,16 +17,17 @@
   </div><!--/.card-->
 </div><!--/.col-->
 
-{{ content }}
+{{ content | safe }}
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const latitude = {{ latitude }};
-    const longitude = {{ longitude }};
+    const latitude = {{ location.lat }};
+    const longitude = {{ location.long }};
     const map = initializeMap(latitude, longitude);
   });
 </script>
 {% endblock %}
 
 {% block after %}
+<!--Referências-->
 {% endblock %}
