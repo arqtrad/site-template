@@ -4,16 +4,24 @@
     {% for a in album %}
       <div class="col">
         <div class="card shadow-sm">
-          <img width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" alt="{{ a.title }}" src="{{ a.teaser }}" />
+          <img width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" alt="Imagem do(a) {{ a.data.title }}" src="{{ a.data.teaser | url }}" />
+          <div class="card-header">
+            {{ a.data.location.country | countryEmoji }}
+            {{ a.data.location.state }}
+            ›
+            {{ a.data.location.city }}
+          </div>
           <div class="card-body">
-            <h3 class="card-title">{{ a.title }}</h3>
-            <p class="card-text">{{ a.excerpt }}</p>
+            <h3 class="card-title">
+              <a href="{{ a.url }}" class="text-decoration-none link-body-emphasis">{{ a.data.title }}</a>
+            </h3>
+            <p class="card-text">{{ a.data.excerpt }}</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Exibir</button>
+                <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ a.url }}">Exibir</a></a>
                 <button type="button" class="btn btn-sm btn-outline-secondary">Guardar</button>
               </div>
-              <small class="text-body-secondary">{{ a.date }}</small>
+              <small class="text-body-secondary">{{ a.data.date }}</small>
             </div>
           </div>
         </div>
