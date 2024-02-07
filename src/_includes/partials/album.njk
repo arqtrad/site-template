@@ -7,10 +7,14 @@
           <img width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" alt="Imagem do(a) {{ a.data.title }}" src="{{ a.data.teaser | url }}" />
           <div class="card-header">
             {% if a.data.location.country %}
-            {{ a.data.location.country | countryEmoji }}
+              <span aria-label="{{ ui[a.data.location.country] }}">
+                {{ a.data.location.country | countryEmoji }}
+              </span>
             {% endif %}
-            {{ a.data.location.state }}
-            ›
+            {% if a.data.location.state %}
+              {{ a.data.location.state }}
+              ›
+            {% endif %}
             {{ a.data.location.city }}
           </div>
           <div class="card-body">

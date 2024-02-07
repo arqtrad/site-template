@@ -22,7 +22,7 @@
         {% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}
       </p>
       <form id="home-search" class="d-sm-flex col-md-3 mx-auto justify-content-sm-center" role="search">
-        <input class="form-control" type="search" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisa">
+        <input class="form-control" type="search" id="search-input" placeholder="{{ ui.search_verb }}..." aria-label="{{ ui.search_verb }}">
       </form>
     </div>
   </div>
