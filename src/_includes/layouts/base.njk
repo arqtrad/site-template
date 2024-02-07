@@ -5,7 +5,7 @@
 </head>
 <body>
 {% for includeBefore in includeBefore %}
-  {{ includeBefore }}
+  {{ includeBefore | safe }}
 {% endfor %}
 
 {% block nav %}
@@ -24,7 +24,7 @@
 {% endblock %}
 
 {% for includeAfter in includeAfter %}
-  {{ includeAfter }}
+  {{ includeAfter | safe }}
 {% endfor %}
 <footer>
   {% include "partials/footer.njk" %}
