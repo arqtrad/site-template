@@ -1,38 +1,32 @@
-<div class="album py-5">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    {% for a in album %}
-      <div class="col">
-        <div class="card shadow-sm">
-          <img width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" alt="Imagem do(a) {{ a.data.title }}" src="{{ a.data.teaser | url }}" />
-          <div class="card-header">
-            {% if a.data.location.country %}
-              <span aria-label="{{ ui[a.data.location.country] }}">
-                {{ a.data.location.country | countryEmoji }}
-              </span>
-            {% endif %}
-            {% if a.data.location.state %}
-              {{ a.data.location.state }}
-              ›
-            {% endif %}
-            {{ a.data.location.city }}
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">
-              <a href="{{ a.url }}" class="text-decoration-none link-body-emphasis">{{ a.data.title }}</a>
-            </h3>
-            <p class="card-text">{{ a.data.excerpt }}</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ a.url }}">Exibir</a></a>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Guardar</button>
-              </div>
-              <small class="text-body-secondary">{{ a.data.date }}</small>
-            </div>
-          </div>
+{% for a in album %}
+<div class="col col-sm-6 col-md-4 col-lg-3">
+  <div class="card shadow-sm">
+    <img width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" alt="Imagem do(a) {{ a.data.title }}" src="{{ a.data.teaser | url }}" />
+    <div class="card-header">
+      {% if a.data.location.country %}
+        <span aria-label="{{ ui[a.data.location.country] }}">
+          {{ a.data.location.country | countryEmoji }}
+        </span>
+      {% endif %}
+      {% if a.data.location.state %}
+        {{ a.data.location.state }}
+        ›
+      {% endif %}
+      {{ a.data.location.city }}
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">
+        <a href="{{ a.url }}" class="text-decoration-none link-body-emphasis">{{ a.data.title }}</a>
+      </h3>
+      <p class="card-text">{{ a.data.excerpt }}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ a.url }}">Exibir</a></a>
+          <button type="button" class="btn btn-sm btn-outline-secondary">Guardar</button>
         </div>
+        <small class="text-body-secondary">{{ a.data.date }}</small>
       </div>
-    {% endfor %}
-    </div><!--/.row-->
-  </div><!--/.container-->
-</div><!--/.album-->
+    </div>
+  </div>
+</div>
+{% endfor %}

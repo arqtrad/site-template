@@ -14,7 +14,7 @@
 </svg>
 
 <div class="my-5">
-  <div id="home-hero" class="p-5 text-center bg-body-tertiary">
+  <div id="home-hero" class="p-5 text-center bg-body-tertiary" style="{% if header.overlay_image %}background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url('{{ header.overlay_image }}'); background-size: cover; background-position: center;{% endif %}">
     <div class="container py-5">
       <svg class="bi mt-4 mb-3" width="180" height="180"><use xlink:href="#logo-grande"/></svg>
 	    <h1 class="display-1">{{ site.name }}</h1>

@@ -41,7 +41,25 @@
 {% endblock %}
 
 {% block after %}
-<!--Referências-->
+{% if dwg %}
+{% endif %}
+
+{% if docs %}
+{% endif %}
+
+{% if media %}
+<div class="container-fluid text-center">
+  <h2 id="iconografia" style="text-transform: capitalize;">{{ ui.iconography }}</h2>
+  <div class="row g-3 mx-3">
+    {% include "partials/album.njk" %}
+  </div><!--/.row-->
+</div><!--/.container-fluid-->
+{% endif %}
+
+{% if references %}
+{% endif %}
+
+<!--Leaflet map generator-->
 <script>
   const map = L.map('map').setView([{{ location.lat }}, {{ location.long }}], {{ location.zoom }});
   const marker = L.marker([{{ location.lat }}, {{ location.long }}]).addTo(map);
@@ -50,6 +68,7 @@
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 </script>
+<!--/Leaflet map generator-->
 
 {% set prevStep = collections.casa | getPreviousCollectionItem %}
 {% set nextStep = collections.casa | getNextCollectionItem %}
