@@ -31,7 +31,19 @@
             {% endif %}
             {{ location.city }}
           </li>
-          <li class="list-group-item">Outras referências</li>
+          <li class="list-group-item">
+            {% if date %}
+              Inclusão:
+            {% else %}
+              Última atualização: 
+            {% endif %}
+            {{ page.date | dateFilter }}
+          </li>
+          <li class="list-group-item">
+            {% if author %}
+              Responsável: {{ authors[author].name }}
+            {% endif %}
+          </li>
         </ul>
       </div><!--/.card-->
     </div><!--/.col-md-4-->
@@ -41,6 +53,7 @@
 {% endblock %}
 
 {% block after %}
+<div class="container-fluid text-center">
 {% if dwg %}
 {% endif %}
 
@@ -48,16 +61,15 @@
 {% endif %}
 
 {% if media %}
-<div class="container-fluid text-center">
   <h2 id="iconografia" style="text-transform: capitalize;">{{ ui.iconography }}</h2>
   <div class="row g-3 mx-3">
     {% include "partials/album.njk" %}
   </div><!--/.row-->
-</div><!--/.container-fluid-->
 {% endif %}
 
 {% if references %}
 {% endif %}
+</div><!--/.container-fluid-->
 
 <!--Leaflet map generator-->
 <script>
