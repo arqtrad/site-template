@@ -1,6 +1,20 @@
 {% extends "layouts/base.njk" %}
-
 {% block header %}
+<style>
+#home-hero {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, {{ header.filter }}),
+                    rgba(255, 255, 255, {{ header.filter }})),
+                    url('{{ header.overlay_image }}');
+  @media(prefers-color-scheme: dark) {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, {{ header.filter }}),
+                      rgba(0, 0, 0, {{ header.filter }})),
+                      url('{{ header.overlay_image }}');
+  }
+}
+</style>
+
 <svg class="d-none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <symbol id="logo-grande" width="180" height="180" viewBox="0 0 1012 1012">
     <circle cx="506" cy="506" r="486" style="fill:#fcf9e6;stroke-width:40;stroke:#282f6a"/>
@@ -14,7 +28,7 @@
 </svg>
 
 <div class="my-5">
-  <div id="home-hero" class="p-5 text-center bg-body-tertiary" style="{% if header.overlay_image %}background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url('{{ header.overlay_image }}'); background-size: cover; background-position: center;{% endif %}">
+  <div id="home-hero" class="p-5 text-center bg-body-tertiary">
     <div class="container py-5">
       <svg class="bi mt-4 mb-3" width="180" height="180"><use xlink:href="#logo-grande"/></svg>
 	    <h1 class="display-1">{{ site.name }}</h1>

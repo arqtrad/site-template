@@ -4,6 +4,7 @@ layout: "layouts/home.njk"
 isHome: true
 header:
   overlay_image: "https://i.pinimg.com/originals/f7/76/49/f7764902ee90d4fc48b6f795307bc366.jpg"
+  filter: 0.5
   caption: "Abigail de Andrade, Estrada do Mundo Novo, 1888"
 triptych:
 - image_path: https://placehold.co/140x140/png
@@ -24,10 +25,10 @@ triptych:
 ---
 
 <section id="colecoes-especiais">
-  <h2 class="text-center">Coleções especiais</h2>
+  <h2 class="text-center pb-3">Coleções especiais</h2>
 
   <div class="container">
-    <div class="row my-2 text-center">
+    <div class="row my-3 text-center">
       {% for t in triptych %}
       <div class="col-md-6 col-lg-4">
         {% if t.image_path %}
@@ -49,10 +50,10 @@ triptych:
 </section>
 
 <section id="inclusoes-recentes">
-  <h2 class="text-center">Inclusões recentes</h2>
+  <h2 class="text-center my-3">Inclusões recentes</h2>
 
   <div class="container-fluid">
-    <div class="row g-3 mx-3">
+    <div class="row g-3 m-3">
     {% assign album = collections.casa | reverse %}
     {% include "partials/album.njk" %}
     </div><!--/.row-->
