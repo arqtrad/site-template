@@ -40,8 +40,13 @@
             {{ page.date | dateFilter }}
           </li>
           <li class="list-group-item">
-            {% if author %}
-              Responsável: {{ authors[author].name }}
+            {% if authors %}
+	      Responsáveis:
+	      {% for author in authors %}
+	        {{ equipe[author].name }}
+	      {% endfor %}
+	    {% elif author %}
+              Responsável: {{ equipe[author].name }}
             {% endif %}
           </li>
         </ul>

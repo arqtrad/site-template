@@ -1,7 +1,7 @@
 {% for a in album %}
-<div class="col col-sm-6 col-md-4 col-lg-3">
+<div class="col col-sm-6 col-md-4 col-lg-3 col-xl-2">
   <div class="card shadow-sm">
-    <img width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" alt="Imagem do(a) {{ a.data.title }}" src="{{ a.data.teaser | url }}" />
+    <img class="card-img-top" alt="Imagem do(a) {{ a.data.title }}" src="{{ a.data.teaser | url }}" />
     <div class="card-header">
       {% if a.data.location.country %}
         <span aria-label="{{ ui[a.data.location.country] }}">
@@ -24,7 +24,7 @@
           <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ a.url }}">Exibir</a></a>
           <button type="button" class="btn btn-sm btn-outline-secondary">Guardar</button>
         </div>
-        <small class="text-body-secondary">{{ a.data.date }}</small>
+        <small class="text-body-secondary">{{ a.data.date | dateFilter }}</small>
       </div>
     </div>
   </div>
