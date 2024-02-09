@@ -26,27 +26,7 @@ triptych:
 
 <section id="colecoes-especiais">
   <h2 class="text-center pb-3">Coleções especiais</h2>
-
-  <div class="container">
-    <div class="row my-3 text-center">
-      {% for t in triptych %}
-      <div class="col-md-6 col-lg-4">
-        {% if t.image_path %}
-          <img class="rounded-circle" src="{{ t.image_path }}" width="140" height="140" alt="{{ t.title }}" />
-        {% endif %}
-        {% if t.title %}
-          <h3 class="fw-normal">{{ t.title }}</h3>
-        {% endif %}
-        {% if t.excerpt %}
-          <p>{{ t.excerpt }}</p>
-        {% endif %}
-        {% if t.url %}
-          <p><a class="btn{% if t.btn_class %} {{ t.btn_class }}{% endif %}" href="{{ t.url }}">{% if t.btn_label %}{{ t.btn_label }}{% else %}{{ ui.read_more }}…{% endif %}</a></p>
-        {% endif %}
-      </div>
-      {% endfor %}
-    </div><!--/.row-->
-  </div><!--/.triptych-->
+  {% include "partials/triptych.njk" %}
 </section>
 
 <section id="inclusoes-recentes">
