@@ -1,20 +1,66 @@
 # Casas tradicionais luso-brasileiras #
 
+## Como contribuir
+
+Até o momento temos dois exemplos de fichas completas que podem ser
+usadas como referência para transcrever as outras fichas:
+
+- Ficha de obra: [Casarão Azul de Planaltina](src/casa/br-df-planaltina-casarao_azul.md)
+- Ficha de mídia: [Foto do casarão Azul](src/media/br-df-planaltina-casarao_azul-depha-950901.yaml)
+
+Os arquivos de mídia por ora não serão diretamente incluídos no
+repositório, por motivos de custo. Temos a princípio duas opções para
+referenciar imagens:
+
+- [Wikimedia Commons](https://commons.wikimedia.org) se forem imagens em
+  domínio público (fotos e desenhos muito antigos, por exemplo) ou
+  material produzido por nós mesmos, inclusive desenhos em formato
+  `.svg`;
+- [Esta pasta no Pinterest](https://www.pinterest.com/abacoarq/arquitetura-tradicional/casa/)
+  onde podemos carregar imagens em geral (mas não arquivos `.svg`).
+
+Imagens que já são acessíveis a partir de um link direto para um
+repositório existente (como o próprio Wikimédia Commons ou a Biblioteca
+Nacional, por exemplo) podem ser apenas referenciadas, mas é
+interessante criar uma cópia de segurança na pasta do Pinterest e no
+nosso disco rígido.
+
 ## Estrutura dos arquivos ##
 
     .
-    ├── README.md
+    ├── _js
+    │   └── search.js
+    ├── _pages
+    │   ├── 40palmos.md
+    │   ├── planalto.md
+    │   ├── produtos.md
+    │   └── sintaxe.md
+    ├── _scss
+    │   └── styles.scss
     ├── assets
-    │   ├── css
+    │   ├── biblio
+    │   ├── fonts
     │   ├── js
     │   └── media
-    └── docs
-        ├── _data
-        ├── _includes
-        ├── _layouts
-        ├── obra
-        ├── page
-        └── post
+    ├── docs
+    │   └── obra
+    ├── src
+    │   ├── _data
+    │   ├── _includes
+    │   ├── casa  # <-- Editar aqui!
+    │   ├── docs
+    │   ├── dwg   # <-- Editar aqui!
+    │   ├── filters
+    │   ├── media # <-- Editar aqui!
+    │   ├── pages
+    │   ├── utils
+    │   ├── index.html
+    │   └── rss.njk
+    ├── LICENSE
+    ├── README.md
+    ├── eleventy.config.js
+    ├── package-lock.json
+    └── package.json
 
 ------------
 
@@ -25,4 +71,3 @@
  
  You should have received a copy of the license along with this
  work.  If not, see <http://creativecommons.org/licenses/by/3.0/>.
-
