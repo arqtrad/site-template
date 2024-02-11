@@ -33,7 +33,7 @@ jobs:
           lfs: true
           submodules: recursive
       - name: Build with NPM
-        run: npm install && npm build
+        run: npm install && npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
