@@ -30,12 +30,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          lfs: true
           submodules: recursive
       - name: Build with NPM
         run: npm install && npm build
-        with:
-          source: ./
-          destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
