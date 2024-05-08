@@ -5,7 +5,6 @@
 // const plugin = require('some-eleventy-plugin-package')
 const countryEmoji = require('./src/filters/country-emoji.js');
 const { DateTime } = require('luxon');
-const dynamicCategories = require('eleventy-plugin-dynamic-categories');
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const EleventyFetch = require('@11ty/eleventy-fetch');
 const fs = require("fs");
@@ -65,10 +64,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
   eleventyConfig.addFilter('countryEmoji', countryEmoji);
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
-  eleventyConfig.addPlugin(dynamicCategories, {
-    categoryVar: "categories",
-    itemCollection: "all",
-  });
   eleventyConfig.addPlugin(pluginRss, {
     posthtmlRenderOptions: {
       closingSingleTag: "slash"
