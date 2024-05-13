@@ -1,8 +1,8 @@
 {
-  "name": "Casas tradicionais luso-brasileiras",
+  "title": "Casas tradicionais luso-brasileiras",
   "description": "Documentário da arquitetura doméstica publicada na bibliografia de referência",
-  "author": "Pedro P. Palazzo",
+  "name": "Pedro P. Palazzo",
   "email": "labeurbe@unb.br",
-  "lang": "pt-BR",
+  "locale": "pt-BR",
   "url": "https://casa.tradicional.arq.br"
 }
