@@ -76,14 +76,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addDataExtension('yml, yaml', contents => yaml.load(contents));
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   //eleventyConfig.setQuietMode(true);
-	// https://github.com/Myllaume/eleventy-plugin-citeproc/
-	/*
-	 *eleventyConfig.addPlugin(eleventyCiteproc, {
-	 *  bibliographicStylePath: path.join(__dirname, 'assets/biblio/chicago-note-bibliography.csl'),
-	 *  bibliographicLocalizationPath: path.join(__dirname, 'assets/biblio/locales-pt-BR.xml'),
-	 *  bibliographicDataPath: path.join(__dirname, '_data/biblio.json')
-	 *});
-	 */
  /********************
   * Setup views {{{2 *
   ********************/
