@@ -12,17 +12,17 @@ triptych:
   title     : "Planalto central"
   excerpt   : "Casas do Planalto central do Brasil, do ciclo do ouro à ferrovia"
   url       : /planalto/
-  btn_class : "btn-primary"
+  btn_class : "btn-outline-primary"
 - image_path: https://placehold.co/210x210/png
   title     : "40 palmos"
   excerpt   : "Difusão do módulo de 40 palmos de testada em Portugal nos séculos XIX e XX"
   url       : /40palmos/
-  btn_class : "btn-primary"
+  btn_class : "btn-outline-primary"
 - image_path: https://placehold.co/210x210/png
   title     : "Sintaxe espacial"
   excerpt   : "Casas brasileiras analisadas segundo a profundidade visual"
   url       : /sintaxe/
-  btn_class : "btn-primary"
+  btn_class : "btn-outline-primary"
 pagination:
   data: collections.casa
   reverse: true
@@ -47,7 +47,7 @@ templateEngineOverride: njk
     {% include "partials/album.njk" %}
   {% endfor %}
   </div>
-  <div class="d-grid gap-2 col-6 col-lg-3 mx-auto mt-4">
+  <div class="d-flex flex-columns row-cols-md-2 row-cols-lg-3 mx-auto mt-4 justify-content-center">
     <a type="button" href="/casa/" class="btn btn-outline-primary btn-lg">
       {{ ui_text[lang].load_all }}
     </a>
