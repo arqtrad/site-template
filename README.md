@@ -2,11 +2,8 @@
 
 ## Como contribuir
 
-Até o momento temos dois exemplos de fichas completas que podem ser
-usadas como referência para transcrever as outras fichas:
-
-- Ficha de obra: [Casarão Azul de Planaltina](src/casa/br-df-planaltina-casarao_azul.md)
-- Ficha de mídia: [Foto do casarão Azul](src/media/br-df-planaltina-casarao_azul-depha-950901.yaml)
+Seguir o [modelo de preenchimento](src/casa/casa.yml). Em caso de
+dúvidas, consultar as fichas já preenchidas.
 
 Os arquivos de mídia por ora não serão diretamente incluídos no
 repositório, por motivos de custo. Temos a princípio duas opções para
@@ -36,7 +33,7 @@ nosso disco rígido.
     │   ├── produtos.md
     │   └── sintaxe.md
     ├── _scss
-    │   └── styles.scss
+    │   └── main.scss
     ├── assets
     │   ├── biblio
     │   ├── fonts
@@ -58,13 +55,13 @@ nosso disco rígido.
     │   └── rss.njk
     ├── LICENSE
     ├── README.md
-    ├── eleventy.config.js
+    ├── .eleventy.js
     ├── package-lock.json
     └── package.json
 
 ------------
 
- casa (c) 2023 by Pedro P. Palazzo, Eduarda Viana & Anna Carolina Krause
+ casa (c) 2023–2024 by Pedro P. Palazzo, Eduarda Viana & Eduarda Toscano
  
  casa is licensed under a
  Creative Commons Attribution 3.0 Unported License.
