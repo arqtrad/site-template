@@ -15,11 +15,10 @@
         {% if coverage.spatial.location.country %}
           {{ coverage.spatial.location.country | countryEmoji }}
           {{ ui[coverage.spatial.location.country] }}
-          ›
         {% endif %}
         {% if coverage.spatial.location.state %}
           {{ coverage.spatial.location.state }}
-          ›
+          <i class="bi bi-chevron-compact-right" aria-hidden="true"></i>
         {% endif %}
         {% if coverage.spatial.location.city %}
           {{ coverage.spatial.location.city }}
