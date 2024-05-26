@@ -1,0 +1,8 @@
+main:
+  - title : "Sobre o projeto"
+    url   : "/info/"
+  - title : "Equipe"
+    url   : "/equipe/"
+  - title : '<i class="bi bi-github" aria-hidden="true"></i> Dados abertos'
+    url   : "https://github.com/arqtrad/casa"
+    target: "_blank"
