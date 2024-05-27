@@ -1,6 +1,6 @@
 main:
   - title : "Sobre o projeto"
-    url   : "/info/"
+    url   : "/expediente/"
   - title : "Equipe"
     url   : "/equipe/"
   - title : '<i class="bi bi-github" aria-hidden="true"></i> Dados abertos'
