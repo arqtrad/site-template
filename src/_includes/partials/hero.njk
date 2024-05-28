@@ -28,17 +28,19 @@
         </span>
         {%- endif %}
       </h1>
-      {% if excerpt %}{% set description = excerpt %}{% endif %}
-      {% if description %}<div class="lead">
-        {{ description | safe }}
+      {% if excerpt %}{% set excerpt = excerpt %}{% endif %}
+      {% if excerpt %}<div class="lead">
+        {{ excerpt | safe }}
       </div>{% endif %}
       {% if header.cta_url %}
         <p><a href="{{ header.cta_url }}" class="btn btn--light-outline btn--large">{{ header.cta_label }}</a></p>
       {% endif %}
       {% if header.actions %}
-        <p>
+        <p class="action">
         {% for action in header.actions %}
-          <a href="{{ action.url }}" class="btn btn--light-outline btn--large">{{ action.label }}</a>
+        <a href="{{ action.href }}"{% if action.btn_class %} class="{{ action.btn_class }}"{% endif %}>
+          {{ action.label | safe }}
+        </a>
         {% endfor %}
         {% endif %}
     </div>
