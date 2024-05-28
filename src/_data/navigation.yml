@@ -3,7 +3,7 @@ main:
     url   : "/expediente/"
   - title : "Equipe"
     url   : "/equipe/"
-  - title : '<i class="bi bi-github" aria-hidden="true"></i> Dados abertos'
+  - title : '<i class="bi bi-github" aria-hidden="true"></i> Dados abertos e como contribuir'
     url   : "https://github.com/arqtrad/casa"
     target: "_blank"
 
