@@ -50,6 +50,7 @@ en: &DEFAULT_EN
   search_algolia_no_results  : "No results"
   results_found              : "Result(s) found"
   back_to_top                : "Back to top"
+  page_not_found             : "Page not found."
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -269,6 +270,7 @@ pt: &DEFAULT_PT
   search_label_text          :
   search_algolia_no_results  :
   iconography                : "Iconografia"
+  page_not_found             : "Página não encontrada."
 pt-PT:
   <<: *DEFAULT_PT
 # Brazilian Portuguese
@@ -321,6 +323,7 @@ pt-BR:
   results_found              : "Resultado(s) encontrado(s)"
   back_to_top                : "Voltar para o topo"
   load_all                   : "Carregar lista completa"
+  page_not_found             : "Página não encontrada."
   type: # https://docs.citationstyles.org/en/stable/specification.html#appendix-iii-types
     article-journal          : "artigo em periódico"
     article-magazine         : "artigo em revista"

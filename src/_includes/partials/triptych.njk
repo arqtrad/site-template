@@ -6,10 +6,12 @@
     {% for t in triptych %}
     <div class="col-md-6 col-lg-4">
       {% if t.image_path %}
-        <img class="rounded-circle mb-3" src="{{ t.image_path }}" width="140" height="140" alt="{{ t.title }}" />
+        <div class="ratio ratio-1x1 w-50 mx-auto">
+          <img class="rounded-circle img-thumbnail mb-3" src="{{ t.image_path }}" alt="{{ t.title }}" />
+        </div>
       {% endif %}
       {% if t.title %}
-        <h3 class="fw-normal">{{ t.title }}</h3>
+        <h3 class="fw-normal my-3">{{ t.title }}</h3>
       {% endif %}
       {% if t.excerpt %}
         <p>{{ t.excerpt }}</p>
