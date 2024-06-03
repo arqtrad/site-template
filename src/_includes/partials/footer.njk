@@ -25,17 +25,20 @@
       <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 {{ site.name }}</span>
     </div>
 
-    {%- if navigation.footer %}
+  {%- if site.footer.links %}
     <ul class="nav">
-    {% for item in navigation.footer -%}
+    {% for item in site.footer.links -%}{% if item.url -%}
       <li>
         <a href="{{ item.url }}" {% if item.target %}target="{{ item.target }}" {% endif %}class="nav-link{% if item.class %} {{ item.class }}{% endif %}">
-          {{ item.title | safe }}
+        {%- if item.icon %}
+          <i class="{{ item.icon }}" aria-label="{{ item.label }}"></i>
+        {%- endif %}
+          <span class="ps-1{% if item.icon %} d-lg-none{% endif %}">{{ item.label | safe }}</span>
         </a>
       </li>
-    {%- endfor %}
+    {%- endif %}{%- endfor %}
     </ul>
-    {%- endif %}
+  {%- endif %}
   </footer>
 </div>
 
