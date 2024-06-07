@@ -1,9 +1,9 @@
 <div class="col">
-  <div class="card h-100 shadow-sm">
+  <div class="card h-100 shadow-sm"{% if post.data.conformsTo %} itemscope itemtype="{{ post.data.conformsTo }}"{% endif %}>
     <img class="card-img-top" src="{{ post.data.header.teaser }}" />
     <div class="card-header">
       {% if post.data.coverage.spatial.location.country %}
-        <span aria-label="{{ post.data.coverage.spatial.location.country }}">
+        <span class="pe-1" aria-label="{{ post.data.coverage.spatial.location.country }}">
           {{ post.data.coverage.spatial.location.country | countryEmoji }}
         </span>
       {% endif %}
@@ -15,7 +15,7 @@
     </div>
     <div class="card-body">
       <h3 class="card-title">
-        <a href="{{ post.url }}" class="text-decoration-none link-body-emphasis stretched-link">{{ post.data.title }}</a>
+        <a href="{{ post.url }}" class="stretched-link">{{ post.data.title }}</a>
       </h3>
       <p class="card-text">{{ post.data.excerpt }}</p>
     </div>

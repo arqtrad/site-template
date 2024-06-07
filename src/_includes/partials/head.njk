@@ -11,10 +11,10 @@
   {%- if excerpt -%}
     {%- set excerptMeta = excerpt -%}
   {%- else -%}
-    {%- set excerptMeta = site.excerpt -%}
+    {%- set excerptMeta = site.description -%}
   {%- endif -%}
 {%- endif -%}
-{%- set currentUrl = [ site.url, page.url ] | join -%}
+{%- set currentUrl = [ site.url, site.baseurl, page.url ] | join -%}
 
 <title>{{ metaTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />

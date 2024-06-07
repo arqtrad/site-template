@@ -40,7 +40,7 @@
 {% endif %}
 {%- endblock %}
 
-<main>
+<main{% if conformsTo %} itemscope itemtype="{{ conformsTo }}"{% endif %}>
 <div id="main" class="container{% if sidebar or author_profile %} has-sidebar{% endif %}">
   <div class="row{% if classes %} {{ classes }}{% endif %}">
   {%- if sidebar.nav %}
