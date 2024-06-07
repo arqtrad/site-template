@@ -1,11 +1,11 @@
 {% extends "layouts/base.njk" %}
 {% block pagecontent %}
 <script src="/assets/leaflet/leaflet.js"></script>
-<div class="page__content order-md-2">
+<article class="has-infobox order-md-2">
   {{ content | safe }}
-</div><!--/.col-md-8-->
+</article>
 
-<div class="col col-md-4 order-1 mb-5">
+<div class="col col-md-4 order-md-1 mb-5">
   <div class="card">
     <div id="map" class="card-img-top" style="width: 100%; height: 400px;"></div>
     <ul class="list-group list-group-flush">

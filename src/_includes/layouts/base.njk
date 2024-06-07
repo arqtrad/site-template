@@ -44,12 +44,14 @@
 <div id="main" class="container{% if sidebar or author_profile %} has-sidebar{% endif %}">
   <div class="row{% if classes %} {{ classes }}{% endif %}">
   {%- if sidebar.nav %}
-  <small class="d-md-none mb-5">
-    <a class="btn btn-outline-secondary" href="#sidebar">{{ ui_text[lang].skip_primary_nav }}</a>
-  </small>
+    <small class="d-md-none mb-5">
+      <a class="btn btn-outline-secondary" href="#sidebar">{{ ui_text[lang].skip_primary_nav }}</a>
+    </small>
   {%- endif %}
   {% block pagecontent -%}
-  {{ content | safe }}
+    <article>
+      {{ content | safe }}
+    </article>
   {%- endblock %}
   </div>
 </div>
