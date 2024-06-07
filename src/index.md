@@ -3,6 +3,7 @@ title: "Casa tradicional luso-brasileira"
 description: >
   Documentário da arquitetura doméstica publicada na bibliografia de referência
 layout: "layouts/base.njk"
+lang: "pt-BR"
 header:
   overlay_image: "https://i.pinimg.com/originals/f7/76/49/f7764902ee90d4fc48b6f795307bc366.jpg"
   overlay_filter: 0.7
@@ -15,12 +16,6 @@ pagination:
   alias: posts
 templateEngineOverride: njk,md
 ---
-
-```{=html}
-{% if not lang %}
-  {% set lang = site.locale %}
-{% endif %}
-````
 
 # Coleções especiais #
 
