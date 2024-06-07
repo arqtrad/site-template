@@ -28,7 +28,7 @@ templateEngineOverride: njk,md
 {% include "partials/triptych.njk" %}
 ````
 
-# Inclusões recentes #
+# {{ ui_text[lang].recent_posts }} # {.mb-4}
 
 ```{=html}
 <div class="row row-cols-md-2 row-cols-xl-3 g-3 mx-5">
