@@ -17,9 +17,9 @@ templateEngineOverride: njk,md
 ---
 
 ```{=html}
-{%- if not lang -%}
-  {%- set lang = site.locale -%}
-{%- endif %}
+{% if not lang %}
+  {% set lang = site.locale %}
+{% endif %}
 ````
 
 # Coleções especiais #
