@@ -15,9 +15,9 @@
     </div>
     <div class="card-body">
       <h3 class="card-title">
-        <a href="{{ post.url }}" class="stretched-link">{{ post.data.title }}</a>
+        <a href="{{ post.url }}" class="stretched-link">{{ post.data.title | safe }}</a>
       </h3>
-      <p class="card-text">{{ post.data.excerpt }}</p>
+      <p class="card-text">{{ post.data.excerpt | safe }}</p>
     </div>
       <div class="card-footer text-right">
         <small class="text-body-secondary">{{ ui_text[lang].date_label }} {{ post.date | dateFilter }}</small>

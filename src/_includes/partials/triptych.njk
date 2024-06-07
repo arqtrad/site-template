@@ -11,7 +11,7 @@
       </div>
       {% endif %}
       {% if t.title %}
-        <h3 class="fw-normal my-3">{{ t.title }}</h3>
+        <h3 class="fw-normal my-3">{{ t.title | safe }}</h3>
       {% endif %}
       {% if t.excerpt %}
         <p class="card-text">{{ t.excerpt | safe }}</p>
