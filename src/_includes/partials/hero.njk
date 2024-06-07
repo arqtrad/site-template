@@ -18,7 +18,7 @@
 </style>
 
 <div class="position-relative mb-5">
-  <div id="hero" class="page__hero{% if header.overlay_color or header.overlay_image %}--overlay{% endif %}{% if page.url == "/" %} hero-home{% endif %}">
+  <div id="hero" class="page__hero{% if header.overlay_color or header.overlay_image %}--overlay{% endif %}{% if page.url == "/" %} hero-home{% endif %}{% if header.suppressTitle %} suppress-title{% endif %}">
     <div class="container py-5 flex-column">
       <h1 class="display-1">
         {% if title %}{{ title | safe }}{% else %}{{ site.title }}{% endif %}

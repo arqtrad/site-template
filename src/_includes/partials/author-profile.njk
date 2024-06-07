@@ -1,7 +1,7 @@
 <div class="card border-0 mb-3">
 {% if author.avatar %}
   <div class="ratio ratio-1x1">
-    <img src="{{ author.avatar }}" alt="{{ author.name }}" itemprop="image" class="border-2 rounded-circle" />
+    <img src="{{ author.avatar }}" alt="{{ author.name }}" itemprop="image" class="img-thumbnail rounded-circle" />
   </div>
 {% endif %}
 </div><!--/.card-->
@@ -9,9 +9,9 @@
   <div class="card-body author__content">
     <h3 class="author__name card-title" itemprop="name">{{ author.name }}</h3>
     {%- if author.bio %}
-    <small class="author__bio" itemprop="description">
+    <div class="author__bio" itemprop="description">
       {{ author.bio | safe }}
-    </small>
+    </div>
     {%- endif %}
   </div>
   <div class="author__urls-wrapper">
