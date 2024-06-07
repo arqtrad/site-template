@@ -3,12 +3,12 @@ locale                   : "pt-BR"
 title                    : "Casa"
 title_separator          : "-"
 subtitle                 : "tradicional luso-brasileira"
-name                     : "Pedro P. Palazzo & Eduarda Santana"
+name                     : "Pedro P. Palazzo, Eduarda Santana & Eduarda Toscano"
 description: >-
   Documentário da arquitetura cívica publicada na bibliografia de
   referência.
 url                      : "https://casa.tradicional.arq.br"
-baseurl                  : "/"
+baseurl                  : 
 repository               : "arqtrad/casa"
 teaser                   : "https://i.pinimg.com/564x/f7/76/49/f7764902ee90d4fc48b6f795307bc366.jpg"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"

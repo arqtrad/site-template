@@ -6,3 +6,20 @@ main:
   - title : '<i class="bi bi-github" aria-hidden="true"></i> Dados abertos e como contribuir'
     url   : "https://github.com/arqtrad/casa"
     target: "_blank"
+
+especiais:
+  - image_path: https://placehold.co/210x210/png
+    title     : "Planalto central"
+    excerpt   : "Casas do Planalto central do Brasil, do ciclo do ouro à ferrovia"
+    url       : /planalto/
+    btn_class : "btn-outline-primary"
+  - image_path: https://placehold.co/210x210/png
+    title     : "40 palmos"
+    excerpt   : "Difusão do módulo de 40 palmos de testada em Portugal nos séculos XIX e XX"
+    url       : /40palmos/
+    btn_class : "btn-outline-primary"
+  - image_path: https://placehold.co/210x210/png
+    title     : "Sintaxe espacial"
+    excerpt   : "Casas brasileiras analisadas segundo a profundidade visual"
+    url       : /sintaxe/
+    btn_class : "btn-outline-primary"
