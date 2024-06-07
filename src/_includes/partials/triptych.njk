@@ -14,7 +14,7 @@
         <h3 class="fw-normal my-3">{{ t.title }}</h3>
       {% endif %}
       {% if t.excerpt %}
-        <p>{{ t.excerpt }}</p>
+        <p class="card-text">{{ t.excerpt | safe }}</p>
       {% endif %}
       {% if t.url %}
         <p><a class="btn{% if t.btn_class %} {{ t.btn_class }}{% endif %}" href="{{ t.url }}">{% if t.btn_label %}{{ t.btn_label }}{% else %}{{ ui_text[lang].more_label }}…{% endif %}</a></p>
