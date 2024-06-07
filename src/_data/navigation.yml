@@ -1,6 +1,6 @@
 main:
   - title : "Sobre o projeto"
-    url   : "/expediente/"
+    url   : "https://tradicional.arq.br"
   - title : "Equipe"
     url   : "/equipe/"
   - title : '<i class="bi bi-github" aria-hidden="true"></i> Dados abertos e como contribuir'
