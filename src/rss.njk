@@ -1,17 +1,17 @@
 ---
-description: "Últimas contribuições ao inventário"
+description: "Últimas contribuições ao documentário"
 permalink: '/feed.xml'
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.name }}</title>
+  <title>{{ site.title }}</title>
 	<subtitle>{{ site.description }}</subtitle>
 	<link href="{{ permalink | absoluteUrl(site.url) }}" rel="self"/>
 	<link href="{{ site.url }}/"/>
 	<updated>{{ collections.casa | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ site.url }}</id>
 	<author>
-    <name>{{ site.author }}</name>
+    <name>{{ site.name }}</name>
     <email>{{ site.email }}</email>
 	</author>
 	{% for post in collections.casa %}
@@ -24,7 +24,7 @@ permalink: '/feed.xml'
       {% if post.data.lang %}
       {% set lang = post.data.lang %}
       {% else %}
-      {% set lang = site.lang %}
+      {% set lang = site.locale %}
       {% endif %}
       <content xml:lang="{{ lang }}" type="html"><![CDATA[
         {{ post.templateContent | safe }}

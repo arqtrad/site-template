@@ -1,0 +1,25 @@
+main:
+  - title : "Sobre o projeto"
+    url   : "https://tradicional.arq.br"
+  - title : "Equipe"
+    url   : "/equipe/"
+  - title : '<i class="bi bi-github" aria-hidden="true"></i> Dados abertos e como contribuir'
+    url   : "https://github.com/arqtrad/casa"
+    target: "_blank"
+
+especiais:
+  - image_path: https://placehold.co/210x210/png
+    title     : "Planalto central"
+    excerpt   : "Casas do Planalto central do Brasil, do ciclo do ouro à ferrovia"
+    url       : /planalto/
+    btn_class : "btn-outline-primary"
+  - image_path: https://placehold.co/210x210/png
+    title     : "Quarenta palmos"
+    excerpt   : 'Difusão do módulo de 40 palmos de testada em Portugal nos séculos <span style="font-variant:all-small-caps">XIX</span> e <span style="font-variant:all-small-caps">XX</span>'
+    url       : /40palmos/
+    btn_class : "btn-outline-primary"
+  - image_path: https://placehold.co/210x210/png
+    title     : "Sintaxe espacial"
+    excerpt   : "Casas brasileiras analisadas segundo a profundidade visual"
+    url       : /sintaxe/
+    btn_class : "btn-outline-primary"

@@ -1,0 +1,80 @@
+# Site Settings
+locale                   : "pt-BR"
+title                    : "Casa"
+title_separator          : "-"
+subtitle                 : "tradicional luso-brasileira"
+name                     : "Pedro P. Palazzo"
+description: >-
+  Documentário da arquitetura cívica publicada na bibliografia de
+  referência.
+url                      : "https://casa.tradicional.arq.br"
+baseurl                  : 
+repository               : "arqtrad/casa"
+teaser                   : "https://i.pinimg.com/564x/f7/76/49/f7764902ee90d4fc48b6f795307bc366.jpg"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : 
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 200
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+yandex_site_verification :
+naver_site_verification  :
+head_scripts:
+
+# Social Sharing
+og_image                 : "https://i.pinimg.com/originals/f7/76/49/f7764902ee90d4fc48b6f795307bc366.jpg"
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : Organization # Person or Organization (defaults to Person)
+  name                   : "Arquitetura Tradicional Luso-brasileira"
+  links: # An array of links to social media profiles
+
+# Site Author
+author:
+  name             : "Pedro P. Palazzo"
+  avatar           : "https://avatars.githubusercontent.com/u/8295666?s=400&u=874bd9ba623ae5ceb9cd1b559bab3479fcda9a30&v=4"
+  bio              : "Professor Associado"
+  location         : "FAU–UnB"
+  email            : "palazzo@unb.br"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: "mailto:your.name@email.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
+
+# Site Footer
+footer:
+  links:
+    - label: "E-mail"
+      icon : "bi bi-envelope"
+      url  : "mailto:labeurbe@unb.br"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url:
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url:
+    - label: "Instagram"
+      icon : "bi bi-instagram"
+      url  : "https://instagram.com/arqtrad"
+      target: "_blank"
+    - label: "GitHub"
+      icon : "bi bi-github"
+      url  : "https://github.com/arqtrad/casa"
+      target: "_blank"

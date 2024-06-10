@@ -4,3 +4,9 @@ description: "Página não encontrada."
 layout: "layouts/base.njk"
 permalink: 404.html
 ---
+
+{%- unless lang -%}
+  {%- assign lang = site.locale -%}
+{%- endunless %}
+
+{{ ui_text[lang].page_not_found }}
