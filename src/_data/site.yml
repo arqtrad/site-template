@@ -13,7 +13,7 @@ repository               : "arqtrad/casa"
 teaser                   : "https://i.pinimg.com/564x/f7/76/49/f7764902ee90d4fc48b6f795307bc366.jpg"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : 
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true
 words_per_minute         : 200
 # SEO Related
 google_site_verification :
