@@ -30,6 +30,7 @@ social:
   type                   : Organization # Person or Organization (defaults to Person)
   name                   : "Arquitetura Tradicional Luso-brasileira"
   links: # An array of links to social media profiles
+    - "https://instagram.com/arqtrad"
 
 # Site Author
 author:
