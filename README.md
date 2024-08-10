@@ -27,20 +27,12 @@ nosso disco rígido.
     .
     ├── _js
     │   └── search.js
-    ├── _pages
-    │   ├── 40palmos.md
-    │   ├── planalto.md
-    │   ├── produtos.md
-    │   └── sintaxe.md
     ├── _scss
     │   └── main.scss
     ├── assets
-    │   ├── biblio
     │   ├── fonts
     │   ├── js
     │   └── media
-    ├── docs
-    │   └── obra
     ├── src
     │   ├── _data
     │   ├── _includes
@@ -51,7 +43,8 @@ nosso disco rígido.
     │   ├── media # <-- Editar aqui!
     │   ├── pages
     │   ├── utils
-    │   ├── index.html
+    │   ├── 404.html
+    │   ├── index.md
     │   └── rss.njk
     ├── LICENSE
     ├── README.md
