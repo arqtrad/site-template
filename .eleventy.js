@@ -1,16 +1,16 @@
 /****************
  * Filters {{{1 *
  ****************/
-// First create variables that require() any packages we need
-// const plugin = require('some-eleventy-plugin-package')
+// First create constants that require() any packages we need
 const countryEmoji = require('./src/filters/country-emoji.js');
 const { DateTime } = require('luxon');
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const EleventyFetch = require('@11ty/eleventy-fetch');
-const fs = require("fs");
+const { execSync } = require('child_process'); // Required by pageFind
+const fs = require("fs"); // Do we still need this?
 const Image = require('@11ty/eleventy-img');
 const nodePandoc = require('node-pandoc');
-const path = require('path');
+const path = require('path'); // Do we still need this?
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
@@ -89,6 +89,12 @@ module.exports = function(eleventyConfig) {
 			x => x.data.featured
 		);
 	});
+ /***********************
+  * Postprocessing {{{2 *
+  ***********************/
+  eleventyConfig.on('eleventy.after', () => {
+    execSync(`npx pagefind --source _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+  })
  /***************
   * Return {{{2 *
   ***************/
