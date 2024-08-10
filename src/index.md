@@ -17,13 +17,13 @@ pagination:
 templateEngineOverride: njk,md
 ---
 
-# Coleções especiais #
+# Coleções especiais # {.wide}
 
 ```{=html}
 {% include "partials/triptych.njk" %}
 ````
 
-# {{ ui_text[lang].recent_posts }} # {.mb-4}
+# {{ ui_text[lang].recent_posts }} # {.mb-4 .wide}
 
 ```{=html}
 <div class="row row-cols-md-2 row-cols-xl-3 g-3 mx-5">
