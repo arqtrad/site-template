@@ -9,6 +9,7 @@ layout: "layouts/base.njk"
 classes: "wide"
 permalink: /cronologia/
 templateEngineOverride: njk,md
+css: [ "/assets/timelinejs/css/timeline.css" ]
 ---
 
 ---
