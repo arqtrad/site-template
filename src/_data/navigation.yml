@@ -11,9 +11,9 @@ main:
 
 especiais:
   - image_path: https://placehold.co/210x210/png
-    title     : "Planalto central"
-    excerpt   : "Casas do Planalto central do Brasil, do ciclo do ouro à ferrovia"
-    url       : /planalto/
+    title     : "Cronologia"
+    excerpt   : "Por uma nova cronologia da construção vernacular tradicional"
+    url       : /cronologia/
     btn_class : "btn-outline-primary"
   - image_path: https://placehold.co/210x210/png
     title     : "Quarenta palmos"
