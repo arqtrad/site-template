@@ -89,11 +89,14 @@ module.exports = function(eleventyConfig) {
 			x => x.data.featured
 		);
 	});
+  eleventyConfig.addCollection("media", function(collection) {
+    return collection.getFilteredByGlob("src/media/*.yml");
+  });
  /***********************
   * Postprocessing {{{2 *
   ***********************/
   eleventyConfig.on('eleventy.after', () => {
-    execSync(`npx pagefind --source _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+    execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
   })
  /***************
   * Return {{{2 *
