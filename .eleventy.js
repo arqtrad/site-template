@@ -90,7 +90,7 @@ module.exports = function(eleventyConfig) {
 		);
 	});
   eleventyConfig.addCollection("media", function(collection) {
-    return collection.getFilteredByGlob("src/media/*.yml");
+    return collection.getFilteredByGlob("src/media/*.md");
   });
  /***********************
   * Postprocessing {{{2 *
