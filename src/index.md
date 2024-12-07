@@ -28,7 +28,7 @@ templateEngineOverride: njk,md
 ```{=html}
 <div class="row row-cols-md-2 row-cols-xl-3 g-3 mx-5">
 {% for post in pagination.items %}
-  {% include "partials/album.njk" %}
+  {% include "partials/card-place.njk" %}
 {% endfor %}
 </div>
 <div class="d-flex flex-columns row-cols-md-2 row-cols-lg-3 mx-auto mt-4 justify-content-center">
