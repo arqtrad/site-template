@@ -24,15 +24,17 @@
 		"build": "npm-run-all css 11ty",
 		"test": "npm-run-all css-lint css"
 	},
+  "dependencies": {
+		"bootstrap": "^5.3.3",
+		"@popperjs/core": "^2.11.8"
+  },
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
 		"@11ty/eleventy-fetch": "^4.0.0",
 		"@11ty/eleventy-img": "^3.1.8",
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"@knight-lab/timelinejs": "^3.9.3",
-		"@popperjs/core": "^2.11.8",
 		"autoprefixer": "^10.4.17",
-		"bootstrap": "^5.3.3",
 		"bootstrap-icons": "^1.11.3",
 		"country-code-emoji": "^2.3.0",
 		"jquery": "^3.7.1",
