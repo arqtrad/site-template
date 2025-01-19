@@ -1,10 +1,10 @@
 main:
+  - title : "Lista de casas"
+    url   : "/casa/"
   - title : "Sobre o projeto"
     url   : "https://tradicional.arq.br"
   - title : "Equipe"
     url   : "/equipe/"
-  - title : "Lista de casas"
-    url   : "/casa/"
   - title : '<i class="bi bi-github" aria-hidden="true"></i> Dados abertos e como contribuir'
     url   : "https://github.com/arqtrad/casa"
     target: "_blank"
