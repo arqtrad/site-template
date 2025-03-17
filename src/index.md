@@ -6,6 +6,7 @@ layout: "layouts/splash.njk"
 locale: "pt-BR"
 classes:
   - "splash"
+  - "wide"
 header:
   overlay_image: "https://i.pinimg.com/originals/f7/76/49/f7764902ee90d4fc48b6f795307bc366.jpg"
   overlay_filter: 0.7
