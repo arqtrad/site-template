@@ -7,7 +7,7 @@ const { DateTime } = require('luxon');
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const EleventyFetch = require('@11ty/eleventy-fetch');
 const { execSync } = require('child_process'); // Required by pageFind
-const fs = require("fs"); // Do we still need this?
+const fs = require("fs"); // Required by csv-parse
 const Image = require('@11ty/eleventy-img');
 const nodePandoc = require('node-pandoc');
 const path = require('path'); // Do we still need this?
@@ -15,7 +15,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 const yaml = require('js-yaml');
-const parse = require("csv-parse/sync");
+const { parse } = require("csv-parse/sync");
 /********************************
  * eleventyConfig function {{{1 *
  ********************************/
@@ -69,12 +69,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('countryEmoji', countryEmoji);
   eleventyConfig.addDataExtension('yml', contents => yaml.load(contents));
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
-	eleventyConfig.addDataExtension("csv", (contents) => {
+	eleventyConfig.addDataExtension('csv', (contents) => {
     const records = parse(contents, {
       columns: true,
       skip_empty_lines: true,
       relax_column_count: true,
       delimiter: ";",
+			cast: true,
       trim: true,
     });
     return records;
