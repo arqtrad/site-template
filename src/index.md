@@ -12,11 +12,6 @@ header:
   overlay_filter: 0.7
   caption: "Abigail de Andrade, Estrada do Mundo Novo, 1888"
 # triptych: especiais
-pagination:
-  data: collections.casa
-  reverse: true
-  size: 6
-  alias: posts
 templateEngineOverride: njk,md
 ---
 
@@ -34,8 +29,10 @@ Em breve.
 
 ```{=html}
 <div class="row row-cols-md-2 row-cols-xl-3 g-3 mx-5">
-{% for post in pagination.items %}
-  {% include "partials/card-place.njk" %}
+{% for post in collections.casa | reverse %}
+  {% if loop.index0 < 6 %}
+    {% include "partials/card-place.njk" %}
+  {% endif %}
 {% endfor %}
 </div>
 <div class="d-flex flex-columns row-cols-md-2 row-cols-lg-3 mx-auto mt-4 justify-content-center">
