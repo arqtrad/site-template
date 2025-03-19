@@ -24,12 +24,12 @@
 		"build": "npm-run-all css 11ty",
 		"test": "npm-run-all css-lint css"
 	},
-  "dependencies": {
-		"bootstrap": "^5.3.3",
-		"@popperjs/core": "^2.11.8"
-  },
+	"dependencies": {
+		"@popperjs/core": "^2.11.8",
+		"bootstrap": "^5.3.3"
+	},
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.1",
+		"@11ty/eleventy": "^3.0.0",
 		"@11ty/eleventy-fetch": "^4.0.0",
 		"@11ty/eleventy-img": "^3.1.8",
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
