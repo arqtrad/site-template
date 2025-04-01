@@ -13,14 +13,11 @@ referenciar imagens:
   domínio público (fotos e desenhos muito antigos, por exemplo) ou
   material produzido por nós mesmos, inclusive desenhos em formato
   `.svg`;
-- [Esta pasta no Pinterest](https://www.pinterest.com/abacoarq/arquitetura-tradicional/casa/)
-  onde podemos carregar imagens em geral (mas não arquivos `.svg`).
+- Um site a ser constituído no domínio unb.br (pendendo confirmação).
 
 Imagens que já são acessíveis a partir de um link direto para um
 repositório existente (como o próprio Wikimédia Commons ou a Biblioteca
-Nacional, por exemplo) podem ser apenas referenciadas, mas é
-interessante criar uma cópia de segurança na pasta do Pinterest e no
-nosso disco rígido.
+Nacional, por exemplo) podem ser apenas referenciadas.
 
 ## Estrutura dos arquivos ##
 
@@ -54,7 +51,7 @@ nosso disco rígido.
 
 ------------
 
- casa (c) 2023–2024 by Pedro P. Palazzo, Eduarda Viana & Eduarda Toscano
+ casa (c) 2023–2024 by Pedro P. Palazzo & equipe.
  
  casa is licensed under a
  Creative Commons Attribution 3.0 Unported License.

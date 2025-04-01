@@ -3,7 +3,7 @@ locale                   : "pt-BR"
 title                    : "Casa"
 title_separator          : "-"
 subtitle                 : "tradicional luso-brasileira"
-name                     : "Pedro P. Palazzo"
+name                     : "Pedro P. Palazzo & equipe"
 description: >-
   Documentário da arquitetura cívica publicada na bibliografia de
   referência.
@@ -11,10 +11,10 @@ url                      : "https://casa.tradicional.arq.br"
 baseurl                  : 
 repository               : "arqtrad/casa"
 teaser                   : "https://i.pinimg.com/564x/f7/76/49/f7764902ee90d4fc48b6f795307bc366.jpg"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : 
 breadcrumbs              : true
 words_per_minute         : 200
+defaultCollection        : 'casa'
 # SEO Related
 google_site_verification :
 bing_site_verification   :

@@ -7,7 +7,7 @@ const { DateTime } = require('luxon');
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const EleventyFetch = require('@11ty/eleventy-fetch');
 const { execSync } = require('child_process'); // Required by pageFind
-const fs = require("fs"); // Do we still need this?
+const fs = require("fs"); // Required by csv-parse
 const Image = require('@11ty/eleventy-img');
 const nodePandoc = require('node-pandoc');
 const path = require('path'); // Do we still need this?
@@ -15,6 +15,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 const yaml = require('js-yaml');
+const { parse } = require("csv-parse/sync");
 /********************************
  * eleventyConfig function {{{1 *
  ********************************/
@@ -32,6 +33,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "node_modules/leaflet/dist": "assets/leaflet" });
 	eleventyConfig.addPassthroughCopy({ "node_modules/jquery/dist": "assets/jquery/js" });
 	eleventyConfig.addPassthroughCopy({ "node_modules/@knight-lab/timelinejs/dist": "assets/timelinejs" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "assets/js/bootstrap.bundle.min.js" });
 	eleventyConfig.addPassthroughCopy("src/.domains");
   eleventyConfig.addPassthroughCopy(".gitattributes");
   // emulate passthrough during --serve:
@@ -65,7 +67,19 @@ module.exports = function(eleventyConfig) {
   });
 	eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
   eleventyConfig.addFilter('countryEmoji', countryEmoji);
+  eleventyConfig.addDataExtension('yml', contents => yaml.load(contents));
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
+	eleventyConfig.addDataExtension('csv', (contents) => {
+    const records = parse(contents, {
+      columns: true,
+      skip_empty_lines: true,
+      relax_column_count: true,
+      delimiter: ";",
+			cast: true,
+      trim: true,
+    });
+    return records;
+  });
   eleventyConfig.addPlugin(pluginRss, {
     posthtmlRenderOptions: {
       closingSingleTag: "slash"
@@ -75,7 +89,6 @@ module.exports = function(eleventyConfig) {
     const yaml = require('js-yaml');
     return JSON.stringify(yaml.load(value));
   });
-  eleventyConfig.addDataExtension('yml, yaml', contents => yaml.load(contents));
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   //eleventyConfig.setQuietMode(true);
  /********************
@@ -89,11 +102,14 @@ module.exports = function(eleventyConfig) {
 			x => x.data.featured
 		);
 	});
+  eleventyConfig.addCollection("media", function(collection) {
+    return collection.getFilteredByGlob("src/media/*.md");
+  });
  /***********************
   * Postprocessing {{{2 *
   ***********************/
   eleventyConfig.on('eleventy.after', () => {
-    execSync(`npx pagefind --source _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+    execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
   })
  /***************
   * Return {{{2 *
