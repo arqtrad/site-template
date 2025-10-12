@@ -1,4 +1,3 @@
-_includes/.git
-_includes/.gitignore
-_scss/.git
-_scss/.gitignore
+**.git
+**.gitignore
+**.DS_Store

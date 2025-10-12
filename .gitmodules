@@ -1,5 +1,5 @@
 [submodule "src/_includes"]
-	path = src/_includes
+	path = _includes
 	url = git@github.com:arqtrad/eleventy-includes
 [submodule "_scss"]
 	path = _scss

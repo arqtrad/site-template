@@ -2,7 +2,7 @@
  * Filters {{{1 *
  ****************/
 // First create constants that require() any packages we need
-const countryEmoji = require('./src/filters/country-emoji.js');
+const countryEmoji = require('./filters/country-emoji.js');
 const { DateTime } = require('luxon');
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const EleventyFetch = require('@11ty/eleventy-fetch');
@@ -12,8 +12,8 @@ const Image = require('@11ty/eleventy-img');
 const nodePandoc = require('node-pandoc');
 const path = require('path'); // Do we still need this?
 const pluginRss = require('@11ty/eleventy-plugin-rss');
-const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
-const w3DateFilter = require('./src/filters/w3-date-filter.js');
+const sortByDisplayOrder = require('./_utils/sort-by-display-order.js');
+const w3DateFilter = require('./filters/w3-date-filter.js');
 const yaml = require('js-yaml');
 const { parse } = require("csv-parse/sync");
 /********************************
@@ -121,7 +121,7 @@ module.exports = function(eleventyConfig) {
 			templateFormats: ["html", "liquid", "njk"],
       input: 'src',
       output: '_site',
-      includes: '_includes'
+      includes: '../_includes'
     }
   }
 };
