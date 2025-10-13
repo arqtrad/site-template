@@ -9,7 +9,9 @@ Os arquivos padrão para todos os sites, que não devem ser modificados
 isoladamente, se encontram no submódulo `tools/`
 
 As principais informações a serem personalizadas para cada site se
-encontram na pasta `src/_data/`.
+encontram na pasta `src/_data/`. Mas atenção: dentro desta pasta há o
+submódulo `src/_data/schemata` que contém informações padrão para todos
+os sites.
 
 O repositório `*-data` que engloba o conteúdo do subprojeto desejado
 deve ser adicionado como submódulo do Git em `src/w`.

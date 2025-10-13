@@ -6,4 +6,4 @@
 	url = git@github.com:arqtrad/styles-bootstrap
 [submodule "src/_data/schemata"]
 	path = src/_data/schemata
-	url = https://github.com/arqtrad/schemata
+	url = https://codeberg.org/tradicional/schemata.git
