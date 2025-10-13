@@ -2,7 +2,7 @@
  * Filters {{{1 *
  ****************/
 // First create constants that require() any packages we need
-const countryEmoji = require('./filters/country-emoji.js');
+const countryEmoji = require('./tools/filters/country-emoji.js');
 const { DateTime } = require('luxon');
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const EleventyFetch = require('@11ty/eleventy-fetch');
@@ -12,8 +12,8 @@ const Image = require('@11ty/eleventy-img');
 const nodePandoc = require('node-pandoc');
 const path = require('path'); // Do we still need this?
 const pluginRss = require('@11ty/eleventy-plugin-rss');
-const sortByDisplayOrder = require('./_utils/sort-by-display-order.js');
-const w3DateFilter = require('./filters/w3-date-filter.js');
+const sortByDisplayOrder = require('./tools/utils/sort-by-display-order.js');
+const w3DateFilter = require('./tools/filters/w3-date-filter.js');
 const yaml = require('js-yaml');
 const { parse } = require("csv-parse/sync");
 /********************************
@@ -28,13 +28,13 @@ module.exports = function(eleventyConfig) {
   *************************/
   // Copy assets/ to _site/assets
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("src/media/*.jpg");
-  eleventyConfig.addPassthroughCopy("src/dwg");
+  // eleventyConfig.addPassthroughCopy("src/media/*.jpg");
+  // eleventyConfig.addPassthroughCopy("src/dwg");
   eleventyConfig.addPassthroughCopy({ "node_modules/leaflet/dist": "assets/leaflet" });
 	eleventyConfig.addPassthroughCopy({ "node_modules/jquery/dist": "assets/jquery/js" });
 	eleventyConfig.addPassthroughCopy({ "node_modules/@knight-lab/timelinejs/dist": "assets/timelinejs" });
   eleventyConfig.addPassthroughCopy({ "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "assets/js/bootstrap.bundle.min.js" });
-	eleventyConfig.addPassthroughCopy("src/.domains");
+	eleventyConfig.addPassthroughCopy(".domains");
   eleventyConfig.addPassthroughCopy(".gitattributes");
   // emulate passthrough during --serve:
   eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
@@ -43,7 +43,7 @@ module.exports = function(eleventyConfig) {
 	*****************/
   async function convertMarkdownToHtml(markdown, args) {
     return new Promise((resolve, reject) => {
-      nodePandoc(markdown, '-d _data/defaults.yml', (err, result) => {
+      nodePandoc(markdown, '-d assets/data/defaults.yml', (err, result) => {
         if (err) {
           console.error(`Pandoc error: ${err.message}`);
           resolve(result);
@@ -95,16 +95,13 @@ module.exports = function(eleventyConfig) {
   * Setup views {{{2 *
   ********************/
   eleventyConfig.addCollection("obras", function(collection) {
-    return collection.getFilteredByGlob("src/casa/*.md");
+    return collection.getFilteredByGlob("src/w/*.md");
   });
 	eleventyConfig.addCollection('destaques', function(collection) {
-    return sortByDisplayOrder(collection.getFilteredByGlob("src/casa/*.md")).filter(
+    return sortByDisplayOrder(collection.getFilteredByGlob("src/w/*.md")).filter(
 			x => x.data.featured
 		);
 	});
-  eleventyConfig.addCollection("media", function(collection) {
-    return collection.getFilteredByGlob("src/media/*.md");
-  });
  /***********************
   * Postprocessing {{{2 *
   ***********************/
@@ -121,7 +118,7 @@ module.exports = function(eleventyConfig) {
 			templateFormats: ["html", "liquid", "njk"],
       input: 'src',
       output: '_site',
-      includes: '../_includes'
+      includes: '../tools/includes'
     }
   }
 };
