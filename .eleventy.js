@@ -43,7 +43,7 @@ module.exports = function(eleventyConfig) {
 	*****************/
   async function convertMarkdownToHtml(markdown, args) {
     return new Promise((resolve, reject) => {
-      nodePandoc(markdown, '-d assets/data/defaults.yml', (err, result) => {
+      nodePandoc(markdown, '-d tools/pandoc/defaults.yml', (err, result) => {
         if (err) {
           console.error(`Pandoc error: ${err.message}`);
           resolve(result);

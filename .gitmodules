@@ -4,3 +4,6 @@
 [submodule "tools"]
 	path = tools
 	url = ssh://git@codeberg.org/tradicional/site-tools.git
+[submodule "src/w"]
+	path = src/w
+	url = 
