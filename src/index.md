@@ -17,10 +17,6 @@ templateEngineOverride: njk,md
 
 # Coleções especiais # {.wide}
 
-:::text-center
-Em breve.
-:::
-
 ```{=html}
 {% include "partials/triptych.njk" %}
 ````
@@ -29,14 +25,14 @@ Em breve.
 
 ```{=html}
 <div class="row row-cols-md-2 row-cols-xl-3 g-3 mx-5">
-{% for post in collections.casa | reverse %}
+{% for post in collections.w | reverse %}
   {% if loop.index0 < 6 %}
     {% include "partials/card-place.njk" %}
   {% endif %}
 {% endfor %}
 </div>
 <div class="d-flex flex-columns row-cols-md-2 row-cols-lg-3 mx-auto mt-4 justify-content-center">
-  <a type="button" href="/casa/" class="btn btn-outline-primary btn-lg">
+  <a type="button" href="/w/" class="btn btn-outline-primary btn-lg">
     {{ schemata.ui_text[locale].load_all }}
   </a>
 </div>
