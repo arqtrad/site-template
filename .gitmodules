@@ -1,9 +1,9 @@
 [submodule "src/_data/schemata"]
 	path = src/_data/schemata
-	url = ssh://git@codeberg.org/tradicional/schemata.git
+	url = git@github.com:arqtrad/schemata.git
 [submodule "tools"]
 	path = tools
-	url = ssh://git@codeberg.org/tradicional/site-tools.git
+	url = git@github.com:arqtrad/site-tools.git
 [submodule "src/w"]
 	path = src/w
 	url = 
